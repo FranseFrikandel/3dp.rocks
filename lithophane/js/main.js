@@ -488,7 +488,7 @@ LITHO.Lithophane.prototype = {
         if (lithoGeometry!==undefined) setTimeout(createSTL, 1);
         
         function createSTL() {
-            stlFile=params.image.filename+"W"+Math.floor(params.WidthInMM)+"H"+Math.floor(params.HeightInMM)+"T"+Math.floor(params.ThickInMM)+"V"+params.vertexPixelRatio+"B"+params.borderThicknessInMM+"A"+params.baseDepth+"C"+curve+""+(params.positive?"P":"N")+(params.mirror?"M":"S");
+            stlFile=params.image.filename+"W"+Math.floor(params.WidthInMM)+"H"+Math.floor(params.HeightInMM)+"T"+Math.floor(params.ThickInMM)+"V"+params.vertexPixelRatio+"B"+params.borderThicknessInMM+"A"+params.baseDepth+"C"+params.curve+""+(params.positive?"P":"N")+(params.mirror?"M":"S");
             stlGenerator = new LITHO.STLGenerator();
             if (params.stlformat==1) {
                 strSTL = stlGenerator.createTxtSTL(lithoGeometry,stlFile,1/params.vertexPixelRatio);
