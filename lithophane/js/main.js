@@ -850,12 +850,17 @@ LITHO.ImageMap.prototype = {
         var repeatY=params.repeatY;
         var mirrorRep=params.mirrorRepeat===1;
         var flipRep=params.flipRepeat===1;
+        var thickBorder=params.thinOrThickBorder;
 
         // we'll need the 2D context to manipulate the data
         var canvas_context = outputCanvas.getContext("2d");
         canvas_context.beginPath();
         canvas_context.lineWidth = "1";
-        canvas_context.fillStyle = "black";
+        if (positive && !thickBorder || !positive && thickBorder) {
+            canvas_context.fillStyle = "black";
+        } else {
+            canvas_context.fillStyle = "white";
+        }
         canvas_context.rect(0, 0, outputCanvas.width, outputCanvas.height);
         canvas_context.fill();
         //fill the canvas black then place the image in the centre leaving black pixels to form the border

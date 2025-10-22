@@ -48,6 +48,7 @@
                         {   "type":"range", "name": "maxOutputDimensionInMM", "title": "Maximum Size (MM)"  , "minVal":   1  , "maxVal": 1000, "step":  1  , "value": 100   },
                         {   "type":"range", "name": "actualThicknessInMM"   , "title": "Thickness (MM)"     , "minVal":   1  , "maxVal":   50, "step":  0.1, "value":   3   },
                         {   "type":"range", "name": "borderThicknessInMM"   , "title": "Border (MM)"        , "minVal":   0  , "maxVal":   50, "step":  0.1, "value":   0   },
+                        {   "type":"range", "name": "thinOrThickBorder"     , "title": "Thin border"        , "minVal":   0  , "maxVal":    1, "step":  1  , "value":   0   ,"onState": "Thick Border"},
                         {   "type":"range", "name": "minThicknessInMM"      , "title": "Thinnest Layer (MM)", "minVal":   0.1, "maxVal":  100, "step":  0.1, "value":   0.8 },
                         {   "type":"range", "name": "vertexPixelRatio"      , "title": "Vectors Per Pixel"  , "minVal":   1  , "maxVal":   10, "step":  1  , "value":   4   },
                         {   "type":"range", "name": "baseDepth"             , "title": "Base/Stand Depth"   , "minVal": -50  , "maxVal":   50, "step":  1  , "value":   0   },
